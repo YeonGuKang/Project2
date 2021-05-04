@@ -3,7 +3,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include <time.h>
-
+// 빛나
 struct stat stat1, stat2;
 struct tm *time1, *time2;
 
