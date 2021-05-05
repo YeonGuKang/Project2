@@ -5,7 +5,7 @@
 #include <time.h>
 
 struct stat stat1, stat2;
-struct tm *time1, *time2;
+struct tm* time1, * time2;
 
 void filestat1();
 void filestat2();
@@ -16,7 +16,7 @@ void blockcmp();
 void datecmp();
 void timecmp();
 
-int main(){
+int main() {
     filestat1();
     filestat2();
     filetime1();
@@ -28,41 +28,41 @@ int main(){
 }
 
 //파일 1의 정보를 가져오는 함수 작성
-void filestat1(){
-    
+void filestat1() {
+    stat("text1", &stat1);
 }
 
 //파일 2의 정보를 가져오는 함수 작성
-void filestat2(){
-    
+void filestat2() {
+
 }
 
 //파일 1의 시간 정보를 가져오는 함수 작성
-void filetime1(){
-    
+void filetime1() {
+
 }
 
 //파일 2의 시간 정보를 가져오는 함수 작성
-void filetime2(){
-    
+void filetime2() {
+
 }
 
 //두 개의 파일 크기를 비교하는 함수 작성
-void sizecmp(){
-    
+void sizecmp() {
+
 }
 
 //두 개의 파일 블락 수를 비교하는 함수 작성
-void blockcmp(){
-    
+void blockcmp() {
+
 }
 
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
-void datecmp(){
-    
+void datecmp() {
+
 }
 
 //두 개의 파일 수정 시간을 비교하는 함수 작성
-void timecmp(){
-    
+void timecmp() {
+
 }
