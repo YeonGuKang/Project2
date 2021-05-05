@@ -50,6 +50,20 @@ void filetime2() {
 
 //두 개의 파일 크기를 비교하는 함수 작성
 void sizecmp() {
+    printf("file1 size : %d\n", (int)stat1.st_size);
+    printf("file2 size : %d\n", (int)stat2.st_size);
+
+    if ((int)stat1.st_size < (int)stat2.st_size)
+    {
+        printf("file2 size is bigger than file1\n");
+    }
+    else if ((int)stat1.st_size > (int)stat2.st_size)
+    {
+        printf("file1 size is bigger than file1\n");
+    }
+    else {
+        printf("same size!\n");
+    }
 
 }
 
