@@ -69,6 +69,20 @@ void sizecmp() {
 
 //두 개의 파일 블락 수를 비교하는 함수 작성
 void blockcmp() {
+    printf("file1 blocks : %d\n", (int)stat1.st_blocks);
+    printf("file2 blocks : %d\n", (int)stat2.st_blocks);
+
+    if ((int)stat1.st_blocks < (int)stat2.st_blocks)
+    {
+        printf("file2 block is bigger than file1\n");
+    }
+    else if ((int)stat1.st_blocks > (int)stat2.st_blocks)
+    {
+        printf("file1 block is bigger than file1\n");
+    }
+    else {
+        printf("same blocks!\n");
+    }
 
 }
 
