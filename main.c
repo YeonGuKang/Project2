@@ -40,11 +40,13 @@ void filestat2() {
 
 //파일 1의 시간 정보를 가져오는 함수 작성
 void filetime1() {
+    time1 = localtime(&stat1.st_mtime);
 
 }
 
 //파일 2의 시간 정보를 가져오는 함수 작성
 void filetime2() {
+    time2 = localtime(&stat2.st_mtime);
 
 }
 
@@ -69,15 +71,50 @@ void sizecmp() {
 
 //두 개의 파일 블락 수를 비교하는 함수 작성
 void blockcmp() {
+    printf("file1 blocks : %d\n", (int)stat1.st_blocks);
+    printf("file2 blocks : %d\n", (int)stat2.st_blocks);
+
+    if ((int)stat1.st_blocks < (int)stat2.st_blocks)
+    {
+        printf("file2 block is bigger than file1\n");
+    }
+    else if ((int)stat1.st_blocks > (int)stat2.st_blocks)
+    {
+        printf("file1 block is bigger than file1\n");
+    }
+    else {
+        printf("same blocks!\n");
+    }
 
 }
 
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
 void datecmp() {
 
+    printf("file1 last modification at %d / %d \n", time1->tm_mon + 1, time1->tm_mday);
+    printf("file2 last modification at %d / %d \n", time2->tm_mon + 1, time2->tm_mday);
+
+
 }
 
 //두 개의 파일 수정 시간을 비교하는 함수 작성
 void timecmp() {
+    printf("file1 last modification time at %d \n", stat1.st_mtime);
+    printf("file2 last modification time at %d \n", stat2.st_mtime);
+
+
+
+    if (stat1.st_mtime < stat2.st_mtime)
+    {
+        printf("file2 is modified latest than file1\n");
+    }
+    else if (stat1.st_mtime > stat2.st_mtime)
+    {
+        printf("file1 is modified latest than file2\n");
+    }
+    else {
+        printf("same time!\n");
+    }
+
 
 }
