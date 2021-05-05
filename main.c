@@ -100,5 +100,22 @@ void datecmp() {
 
 //두 개의 파일 수정 시간을 비교하는 함수 작성
 void timecmp() {
+    printf("file1 last modification time at %d \n", stat1.st_mtime);
+    printf("file2 last modification time at %d \n", stat2.st_mtime);
+
+
+
+    if (stat1.st_mtime < stat2.st_mtime)
+    {
+        printf("file2 is modified latest than file1\n");
+    }
+    else if (stat1.st_mtime > stat2.st_mtime)
+    {
+        printf("file1 is modified latest than file2\n");
+    }
+    else {
+        printf("same time!\n");
+    }
+
 
 }
