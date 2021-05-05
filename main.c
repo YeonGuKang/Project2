@@ -88,6 +88,13 @@ void blockcmp() {
 
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
 void datecmp() {
+    time1 = localtime(&stat1.st_mtime);
+    time2 = localtime(&stat2.st_mtime);
+
+    printf("file1 last modification at %d / %d \n", time1->tm_mon + 1, time1->tm_mday);
+
+    printf("file2 last modification at %d / %d \n", time2->tm_mon + 1, time2->tm_mday);
+
 
 }
 
